@@ -32,7 +32,7 @@
 - (instancetype)initWithDelegate:(id<HttpResponseDelegate>)delegate
                          urlPath:(NSString *)urlPath
                        paramDict:(NSMutableDictionary *)param
-                         cmdCode:(MsgCMDCode)code
+//                         code:(NSString *)code
 {
     self = [super init];
     if (self) {
@@ -40,7 +40,7 @@
         self.delegate = delegate;
         self.urlPath = urlPath;
         self.paramDict = param;
-        self.cmdCode = code;
+//        self.requestCode = code;
     }
     return self;
 }

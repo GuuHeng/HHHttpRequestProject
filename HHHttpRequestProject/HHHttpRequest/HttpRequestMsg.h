@@ -11,7 +11,6 @@
  */
 
 #import <Foundation/Foundation.h>
-#import "MsgConstant.h"
 #import "AFNetworking.h"
 
 @class HttpRequestMsg;
@@ -91,10 +90,10 @@ typedef void (^AFConstructingBlock)(id<AFMultipartFormData> formData);
 
 @property (nonatomic, strong) NSURLSessionTask *requestTask;
 
-/**
- 请求标识 区别请求
- */
-@property (nonatomic, assign) MsgCMDCode cmdCode;
+///**
+// 请求标识 区别请求
+// */
+//@property (nonatomic, strong) NSString *requestCode;
 
 /**
  请求方式 default: POST
@@ -174,8 +173,8 @@ typedef void (^AFConstructingBlock)(id<AFMultipartFormData> formData);
  */
 - (instancetype)initWithDelegate:(id<HttpResponseDelegate>)delegate
                          urlPath:(NSString *)urlPath
-                       paramDict:(NSMutableDictionary *)param
-                         cmdCode:(MsgCMDCode)code;
+                       paramDict:(NSMutableDictionary *)param;
+//                         code:(NSString *)code;
 
 /**
  取消请求
